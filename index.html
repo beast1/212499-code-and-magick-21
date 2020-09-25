@@ -180,19 +180,19 @@
   </div>
 </template>
 <script>
-  var fireballSize = 22;
-  var getFireballSpeed = function(windDirectionIsLeft) {
+  window.fireballSize = 22;
+  window.getFireballSpeed = function(windDirectionIsLeft) {
     return windDirectionIsLeft ? 10 : 5;
   };
-  var wizardSpeed = 3;
-  var wizardWidth = 70;
-  var getWizardHeight = function() {
+  window.wizardSpeed = 3;
+  window.wizardWidth = 70;
+  window.getWizardHeight = function() {
     return 1.337 * wizardWidth;
   };
-  var getWizardX = function(gameFieldWidth) {
+  window.getWizardX = function(gameFieldWidth) {
     return (gameFieldWidth - wizardWidth) / 2;
   };
-  var getWizardY = function(gameFieldHeight) {
+  window.getWizardY = function(gameFieldHeight) {
     return (gameFieldHeight - getWizardHeight()) / 2;
   };
 </script>
