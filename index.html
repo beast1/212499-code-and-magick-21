@@ -62,7 +62,7 @@
   <div class="demo"></div>
 
   <div class="setup-open">
-    <img src="img/user-1.jpg" class="setup-open-icon">
+    <img src="img/user-1.jpg" class="setup-open-icon" tabindex="0">
   </div>
 </header>
 
@@ -81,11 +81,11 @@
         <label>
           <input type="text" name="username"
                  maxlength="25" required
-                 class="setup-user-name" value="Синий Пендальф"/>
+                 class="setup-user-name" value="Синий Пендальф" tabindex="1"/>
         </label>
       </div>
 
-      <span class="setup-close">&times;</span>
+      <span class="setup-close" tabindex="2">&times;</span>
     </div>
 
 
@@ -154,7 +154,7 @@
         <div class="setup-similar-list"><!--Список похожих персонажей--></div>
       </div>
 
-      <button class="button setup-submit">Сохранить</button>
+      <button class="button setup-submit" tabindex="3">Сохранить</button>
     </div>
   </form>
 </div>
@@ -196,6 +196,7 @@
     return (gameFieldHeight - getWizardHeight()) / 2;
   };
 </script>
+<script src="js/setup.js"></script>
 <script src="js/stat.js"></script>
 <script src="js/game.js"></script>
 
