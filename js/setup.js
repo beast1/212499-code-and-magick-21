@@ -1,5 +1,8 @@
 'use strict';
 
+const MIN_NAME_LENGTH = 2;
+const MAX_NAME_LENGTH = 25;
+
 const initSetup = () => {
   const modal = document.querySelector(`.setup`);
   const openBtn = document.querySelector(`.setup-open`);
@@ -62,8 +65,6 @@ const initSetup = () => {
 };
 
 const initNameValidate = (parent) => {
-  const MIN_NAME_LENGTH = 2;
-  const MAX_NAME_LENGTH = 25;
   const name = parent.querySelector(`.setup-user-name`);
 
   const onNameInput = () => {
@@ -84,9 +85,8 @@ const initNameValidate = (parent) => {
 const initCustomControl = (parent, customControlSelector, hiddenInputId, ruleToChange, stateArr) => {
   const control = parent.querySelector(customControlSelector);
   const input = parent.querySelector(hiddenInputId);
-  const STATES = stateArr;
   const setNewState = () => {
-    const newState = STATES[window.getRandomInteger(0, STATES.length - 1)];
+    const newState = stateArr[window.getRandomInteger(0, stateArr.length - 1)];
     if (control.style[ruleToChange] !== newState) {
       control.style[ruleToChange] = newState;
       input.value = newState;
